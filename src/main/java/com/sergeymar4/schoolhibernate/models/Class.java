@@ -1,11 +1,25 @@
 package com.sergeymar4.schoolhibernate.models;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "classes")
 public class Class {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+    @Column(name = "title")
     private String title;
+    @OneToMany(mappedBy = "class_id")
     List<Student> students;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "class_course",
+            joinColumns = @JoinColumn(name = "class_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
     List<Course> courses;
 
     public int getId() {

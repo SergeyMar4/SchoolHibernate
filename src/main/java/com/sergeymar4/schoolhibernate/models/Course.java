@@ -1,8 +1,18 @@
 package com.sergeymar4.schoolhibernate.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="courses")
 public class Course {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+    @Column(name = "title")
     private String title;
+    @ManyToOne
+    @JoinColumn(name = "teacher_id")
     private Teacher teacher;
 
     public int getId() {
