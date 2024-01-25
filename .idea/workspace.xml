@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8c8f379-7451-4d3e-b6c4-b632ff57c5a3" name="Changes" comment="Создание и реализация models и HibernateUtil">
+    <list default="true" id="d8c8f379-7451-4d3e-b6c4-b632ff57c5a3" name="Changes" comment="Реализация анотаций в models">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/CourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/MarkRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/SchoolClassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/TeacherRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Mark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Mark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/SchoolClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/utils/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/utils/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +60,20 @@
       <option name="project" value="LOCAL" />
       <updated>1706101899526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Реализация анотаций в models">
+      <option name="closed" value="true" />
+      <created>1706106693439</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706106693439</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создание и реализация models и HibernateUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание и реализация models и HibernateUtil" />
+    <MESSAGE value="Реализация анотаций в models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализация анотаций в models" />
   </component>
 </project>

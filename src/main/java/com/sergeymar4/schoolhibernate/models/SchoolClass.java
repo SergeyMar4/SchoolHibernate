@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "classes")
-public class Class {
+public class SchoolClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

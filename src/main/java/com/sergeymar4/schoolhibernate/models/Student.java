@@ -3,7 +3,7 @@ package com.sergeymar4.schoolhibernate.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "studemts")
+@Table(name = "students")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Student {
     private int age;
     @OneToMany
     @JoinColumn(name = "class_id")
-    private Class aclass;
+    private SchoolClass schoolClass;
 
     public int getId() {
         return id;
@@ -51,12 +51,12 @@ public class Student {
         this.age = age;
     }
 
-    public Class getAclass() {
-        return aclass;
+    public SchoolClass getSchoolClass() {
+        return schoolClass;
     }
 
-    public void setAclass(Class aclass) {
-        this.aclass = aclass;
+    public void setSchoolClass(SchoolClass schoolClass) {
+        this.schoolClass = schoolClass;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Student {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
-                ", aclass=" + aclass +
+                ", SchoolClass=" + schoolClass+
                 '}';
     }
 }

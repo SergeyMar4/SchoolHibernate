@@ -15,7 +15,7 @@
         <!-- SQL dialect -->
         <property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect</property>
 
-        <mapping class="com.sergeymar4.schoolhibernate.models.Class"/>
+        <mapping class="com.sergeymar4.schoolhibernate.models.SchoolClass"/>
         <mapping class="com.sergeymar4.schoolhibernate.models.Course"/>
         <mapping class="com.sergeymar4.schoolhibernate.models.Mark"/>
         <mapping class="com.sergeymar4.schoolhibernate.models.Student"/>
