@@ -8,6 +8,16 @@ import org.hibernate.Transaction;
 
 public class MarkRepository {
 
+    public Mark getById(int id) {
+        Mark mark = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            mark = session.get(Mark.class, id);
+        }
+
+        return mark;
+    }
+
     public void create(Mark mark) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();

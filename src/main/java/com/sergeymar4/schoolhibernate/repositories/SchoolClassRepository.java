@@ -12,6 +12,16 @@ import java.util.List;
 
 public class SchoolClassRepository {
 
+    public SchoolClass getById(int id) {
+        SchoolClass schoolClass = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            schoolClass = session.get(SchoolClass.class, id);
+        }
+
+        return schoolClass;
+    }
+
     public List<Student> getStudentByFirstName(int class_id, String firstName) {
         List<Student> students = null;
 

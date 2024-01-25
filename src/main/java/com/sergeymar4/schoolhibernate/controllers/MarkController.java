@@ -1,0 +1,38 @@
+package com.sergeymar4.schoolhibernate.controllers;
+
+import com.sergeymar4.schoolhibernate.models.Mark;
+import com.sergeymar4.schoolhibernate.repositories.CourseRepository;
+import com.sergeymar4.schoolhibernate.repositories.MarkRepository;
+import com.sergeymar4.schoolhibernate.repositories.StudentRepository;
+
+public class MarkController {
+    private MarkRepository markRepository;
+    private CourseRepository courseRepository;
+    private StudentRepository studentRepository;
+
+    public MarkController() {
+        this.markRepository = new MarkRepository();
+        this.courseRepository = new CourseRepository();
+        this.studentRepository = new StudentRepository();
+    }
+
+    public void create(int course_id, int student_id, int mark1) {
+        Mark mark = new Mark();
+        mark.setMark(mark1);
+        mark.setCourse(courseRepository.getById(course_id));
+        mark.setStudent(studentRepository.getById(student_id));
+        markRepository.create(mark);
+    }
+
+    public void update(int id, int course_id, int student_id, int mark1) {
+        Mark mark = markRepository.getById(id);
+        mark.setMark(mark1);
+        mark.setStudent(studentRepository.getById(student_id));
+        mark.setCourse(courseRepository.getById(course_id));
+        markRepository.update(mark);
+    }
+
+    public void delete(int id) {
+        markRepository.delete(markRepository.getById(id));
+    }
+}
