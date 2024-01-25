@@ -16,6 +16,10 @@ public class MarkController {
         this.studentRepository = new StudentRepository();
     }
 
+    public Mark getById(int id) {
+        return markRepository.getById(id);
+    }
+
     public void create(int course_id, int student_id, int mark1) {
         Mark mark = new Mark();
         mark.setMark(mark1);

@@ -22,6 +22,18 @@ public class SchoolClassRepository {
         return schoolClass;
     }
 
+    public List<Student> getAll(int class_id) {
+        List<Student> students = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Query query = session.createQuery("from Student where class_id=:class_id");
+            query.setParameter("class_id", class_id);
+            students = query.list();
+        }
+
+        return students;
+    }
+
     public List<Student> getStudentByFirstName(int class_id, String firstName) {
         List<Student> students = null;
 

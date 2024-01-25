@@ -38,6 +38,7 @@ public class StudentController {
         student.setLastName(lastName);
         student.setAge(age);
         student.setSchoolClass(schoolClassRepository.getById(class_id));
+        studentRepository.update(student);
     }
 
     public void delete(int id) {

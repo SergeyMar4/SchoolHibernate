@@ -27,6 +27,10 @@ public class SchoolClassController {
         return schoolClassRepository.getStudentByFirstName(class_id, firstName);
     }
 
+    public List<Student> detAll(int class_id) {
+        return schoolClassRepository.getAll(class_id);
+    }
+
     public void addStudent(int school_id, int student_id) {
         schoolClassRepository.addStudent(schoolClassRepository.getById(school_id), studentRepository.getById(student_id));
     }
