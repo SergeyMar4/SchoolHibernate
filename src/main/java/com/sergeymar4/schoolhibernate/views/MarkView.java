@@ -22,6 +22,40 @@ public class MarkView {
     }
 
     public void show() {
+        while (true) {
 
+            System.out.println(menuMessage);
+            String s = scanner.next();
+
+            if (s.equals("1")) {
+                System.out.println("Введите id оценки = ");
+                int id = scanner.nextInt();
+                System.out.println(markController.getById(id));
+            } else if (s.equals("2")) {
+                System.out.println("Введите id предмета =");
+                int course_id = scanner.nextInt();
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+                System.out.println("Введите оценку = ");
+                int mark = scanner.nextInt();
+                markController.create(course_id, student_id, mark);
+            } else if (s.equals("3")) {
+                System.out.println("Введите id оценки = ");
+                int id = scanner.nextInt();
+                System.out.println("Введите id предмета =");
+                int course_id = scanner.nextInt();
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+                System.out.println("Введите оценку = ");
+                int mark = scanner.nextInt();
+                markController.update(id, course_id, student_id, mark);
+            } else if (s.equals("4")) {
+                System.out.println("Введите id оценки = ");
+                int id = scanner.nextInt();
+                markController.delete(id);
+            } else {
+                break;
+            }
+        }
     }
 }

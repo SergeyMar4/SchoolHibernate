@@ -22,6 +22,38 @@ public class CourseView {
     }
 
     public void show() {
+        while (true) {
 
+            System.out.println(menuMessage);
+            String s = scanner.next();
+
+            if (s.equals("1")) {
+                System.out.println("Введите id предмета = ");
+                int id = scanner.nextInt();
+                System.out.println(courseController.getById(id));
+            } else if (s.equals("2")) {
+                System.out.println(courseController.getAll());
+            } else if (s.equals("3")) {
+                System.out.println("Введите название предмета = ");
+                String title = scanner.next();
+                System.out.println("Введите id учителя = ");
+                int teacher_id = scanner.nextInt();
+                courseController.create(title, teacher_id);
+            } else if (s.equals("4")) {
+                System.out.println("Введите id предмета = ");
+                int course_id = scanner.nextInt();
+                System.out.println("Введите название предмета = ");
+                String title = scanner.next();
+                System.out.println("Введите id учителя = ");
+                int teacher_id = scanner.nextInt();
+                courseController.update(course_id, title, teacher_id);
+            } else if (s.equals("5")) {
+                System.out.println("Введите id предмета =");
+                int id = scanner.nextInt();
+                courseController.delete(id);
+            } else {
+                break;
+            }
+        }
     }
 }

@@ -24,6 +24,48 @@ public class TeacherView {
     }
 
     public void show() {
+        while (true) {
 
+            System.out.println(menuMessage);
+            String s = scanner.next();
+
+            if (s.equals("1")) {
+                System.out.println("Введите id учителя = ");
+                int id = scanner.nextInt();
+                System.out.println(teacherController.getById(id));
+            } else if (s.equals("2")) {
+                System.out.println(teacherController.getAll());
+            } else if (s.equals("3")) {
+                System.out.println("Введите id учителя = ");
+                int teacher_id = scanner.nextInt();
+                System.out.println("Введите id предмета = ");
+                int course_id = scanner.nextInt();
+                teacherController.addCourse(teacher_id, course_id);
+            } else if (s.equals("4")) {
+                System.out.println("Введите имя учителя = ");
+                String firstName = scanner.next();
+                System.out.println("Введите фамилию учителя = ");
+                String lastName = scanner.next();
+                System.out.println("Ввелите возраст учителя = ");
+                int age = scanner.nextInt();
+                teacherController.create(firstName, lastName, age);
+            } else if (s.equals("5")) {
+                System.out.println("Введите id учителя = ");
+                int id = scanner.nextInt();
+                System.out.println("Введите имя учителя = ");
+                String firstName = scanner.next();
+                System.out.println("Введите фамилию учителя = ");
+                String lastName = scanner.next();
+                System.out.println("Ввелите возраст учителя = ");
+                int age = scanner.nextInt();
+                teacherController.update(id, firstName, lastName, age);
+            } else if (s.equals("6")) {
+                System.out.println("Введите id учителя = ");
+                int id = scanner.nextInt();
+                teacherController.delete(id);
+            } else {
+                break;
+            }
+        }
     }
 }
