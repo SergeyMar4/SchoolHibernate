@@ -38,7 +38,7 @@ public class SchoolClassRepository {
         List<Student> students = null;
 
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Query query = session.createQuery("from Student where firstName=:firstName, class_id=:class_id");
+            Query query = session.createQuery("from Student where firstName=:firstName and class_id=:class_id");
             query.setParameter("firstName", firstName);
             query.setParameter("class_id", class_id);
             students = query.list();

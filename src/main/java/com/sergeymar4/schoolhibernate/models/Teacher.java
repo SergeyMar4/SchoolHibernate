@@ -16,7 +16,7 @@ public class Teacher {
     private String lastName;
     @Column(name = "age")
     private int age;
-    @OneToMany(mappedBy = "teachers", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "teacher", fetch = FetchType.EAGER)
     List<Course> courses;
 
     public int getId() {
@@ -57,5 +57,16 @@ public class Teacher {
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", courses=" + courses +
+                '}';
     }
 }

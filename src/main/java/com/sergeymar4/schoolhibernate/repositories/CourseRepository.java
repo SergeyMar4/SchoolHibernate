@@ -48,7 +48,7 @@ public class CourseRepository {
     public void delete(Course course) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.update(course);
+            session.delete(course);
             transaction.commit();
         }
     }

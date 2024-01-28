@@ -15,7 +15,7 @@ public class Student {
     private String lastName;
     @Column(name = "age")
     private int age;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "class_id")
     private SchoolClass schoolClass;
 
@@ -66,7 +66,6 @@ public class Student {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
-                ", SchoolClass=" + schoolClass+
                 '}';
     }
 }

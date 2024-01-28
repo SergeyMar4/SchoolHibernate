@@ -12,9 +12,9 @@ public class SchoolClass {
     private int id;
     @Column(name = "title")
     private String title;
-    @OneToMany(mappedBy = "class_id")
+    @OneToMany(mappedBy = "schoolClass", fetch = FetchType.EAGER)
     List<Student> students;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(
             name = "class_course",
             joinColumns = @JoinColumn(name = "class_id"),

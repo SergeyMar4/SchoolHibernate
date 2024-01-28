@@ -37,7 +37,7 @@ public class MarkRepository {
     public void delete(Mark mark) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.update(mark);
+            session.delete(mark);
             transaction.commit();
         }
     }

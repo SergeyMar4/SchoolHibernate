@@ -11,7 +11,7 @@ public class TeacherView {
     private Scanner scanner;
 
     public TeacherView(Scanner scanner) {
-        menuMessage = "Выбирите действие над Course\n" +
+        menuMessage = "Выбирите действие над Teacher\n" +
                 "1.Вывести по id\n" +
                 "2.Вывести весь список\n" +
                 "3.Добавить предмет\n" +

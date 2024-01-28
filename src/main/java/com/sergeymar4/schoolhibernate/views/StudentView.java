@@ -11,7 +11,7 @@ public class StudentView {
     private Scanner scanner;
 
     public StudentView(Scanner scanner) {
-        menuMessage = "Выбирите действие над Course\n" +
+        menuMessage = "Выбирите действие над Student\n" +
                 "1.Вывести по id\n" +
                 "2.Вывести весь список\n" +
                 "3.Создать\n" +

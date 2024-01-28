@@ -11,7 +11,7 @@ public class MarkView {
     private Scanner scanner;
 
     public MarkView(Scanner scanner) {
-        menuMessage = "Выбирите действие над Course\n" +
+        menuMessage = "Выбирите действие над Mark\n" +
                 "1.Вывести по id\n" +
                 "2.Создать\n" +
                 "3.Обновить\n" +
