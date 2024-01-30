@@ -1,6 +1,7 @@
 package com.sergeymar4.schoolhibernate.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "students")

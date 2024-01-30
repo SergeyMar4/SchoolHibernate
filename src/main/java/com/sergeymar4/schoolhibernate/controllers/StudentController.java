@@ -1,9 +1,13 @@
 package com.sergeymar4.schoolhibernate.controllers;
 
+import com.sergeymar4.schoolhibernate.models.Course;
+import com.sergeymar4.schoolhibernate.models.Mark;
 import com.sergeymar4.schoolhibernate.models.Student;
 import com.sergeymar4.schoolhibernate.repositories.SchoolClassRepository;
 import com.sergeymar4.schoolhibernate.repositories.StudentRepository;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class StudentController {
@@ -43,5 +47,33 @@ public class StudentController {
 
     public void delete(int id) {
         studentRepository.delete(studentRepository.getById(id));
+    }
+
+    public List<Mark> getAllMarksByCourse(int student_id, int course_id) {
+        return studentRepository.getAllMarksByCourse(student_id, course_id);
+    }
+
+    public double getAverageScore(int student_id, int course_id) {
+        double sum = 0;
+
+        List<Mark> marks = studentRepository.getAllMarksByCourse(student_id, course_id);
+
+        for (Mark mark : marks) {
+            sum += mark.getMark();
+        }
+
+        return sum / marks.size();
+    }
+
+    public HashMap<String, Double> getAverageScoreByAllCourse(int student_id) {
+        Student student = studentRepository.getById(student_id);
+        List<Course> courses = student.getSchoolClass().getCourses();
+        HashMap<String, Double> marks = new HashMap<String, Double>();
+
+        for (Course course : courses) {
+            marks.put(course.getTitle(), getAverageScore(student_id, course.getId()));
+        }
+
+        return marks;
     }
 }

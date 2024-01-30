@@ -17,7 +17,10 @@ public class StudentView {
                 "3.Создать\n" +
                 "4.Обновить\n" +
                 "5.Удалить\n" +
-                "6.Выйти в главное меню";
+                "6.Вывести все оценки за предмет\n" +
+                "7.Вывести среднеее арифметическое оценок по предмету\n" +
+                "8.Вывести средний бал по всем предметам\n" +
+                "9.Выйти в главное меню";
         this.studentController = new StudentController();
         this.scanner = scanner;
     }
@@ -60,6 +63,22 @@ public class StudentView {
                 System.out.println("Введите id ученика = ");
                 int id = scanner.nextInt();
                 studentController.delete(id);
+            } else if (s.equals("6")) {
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+                System.out.println("Введите id предмета = ");
+                int course_id = scanner.nextInt();
+                System.out.println(studentController.getAllMarksByCourse(student_id, course_id));
+            } else if (s.equals("7")) {
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+                System.out.println("Введите id предмета = ");
+                int course_id = scanner.nextInt();
+                System.out.println("Средний бал = " + studentController.getAverageScore(student_id, course_id));
+            } else if (s.equals("8")) {
+                System.out.println("Введите id студента = ");
+                int id = scanner.nextInt();
+                System.out.println(studentController.getAverageScoreByAllCourse(id));
             } else {
                 break;
             }

@@ -1,5 +1,8 @@
 package com.sergeymar4.schoolhibernate.repositories;
 
+import com.sergeymar4.schoolhibernate.models.Course;
+import com.sergeymar4.schoolhibernate.models.Mark;
+import com.sergeymar4.schoolhibernate.models.SchoolClass;
 import com.sergeymar4.schoolhibernate.models.Student;
 import com.sergeymar4.schoolhibernate.utils.HibernateUtil;
 import org.hibernate.Session;
@@ -52,5 +55,18 @@ public class StudentRepository {
             session.delete(student);
             transaction.commit();
         }
+    }
+
+    public List<Mark> getAllMarksByCourse(int student_id, int course_id) {
+        List<Mark> marks = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Query query = session.createQuery("from Mark where student_id=:student_id and course_id=:course_id");
+            query.setParameter("student_id", student_id);
+            query.setParameter("course_id", course_id);
+            marks = query.list();
+        }
+
+        return marks;
     }
 }

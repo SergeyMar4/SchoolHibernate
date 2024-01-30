@@ -1,5 +1,8 @@
 package com.sergeymar4.schoolhibernate.models;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -14,7 +17,8 @@ public class SchoolClass {
     private String title;
     @OneToMany(mappedBy = "schoolClass", fetch = FetchType.EAGER)
     List<Student> students;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SUBSELECT)
     @JoinTable(
             name = "class_course",
             joinColumns = @JoinColumn(name = "class_id"),
