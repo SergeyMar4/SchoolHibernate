@@ -18,9 +18,10 @@ public class StudentView {
                 "4.Обновить\n" +
                 "5.Удалить\n" +
                 "6.Вывести все оценки за предмет\n" +
-                "7.Вывести среднеее арифметическое оценок по предмету\n" +
+                "7.Вывести средний балл по предмету\n" +
                 "8.Вывести средний бал по всем предметам\n" +
-                "9.Выйти в главное меню";
+                "9.Вывести четвертные оценки\n" +
+                "10.Выйти в главное меню";
         this.studentController = new StudentController();
         this.scanner = scanner;
     }
@@ -68,17 +69,31 @@ public class StudentView {
                 int student_id = scanner.nextInt();
                 System.out.println("Введите id предмета = ");
                 int course_id = scanner.nextInt();
-                System.out.println(studentController.getAllMarksByCourse(student_id, course_id));
+                System.out.println("Введите номер четверти = ");
+                int quarter = scanner.nextInt();
+                System.out.println(studentController.getAllMarksByCourse(student_id, course_id, quarter));
             } else if (s.equals("7")) {
                 System.out.println("Введите id студента = ");
                 int student_id = scanner.nextInt();
                 System.out.println("Введите id предмета = ");
                 int course_id = scanner.nextInt();
-                System.out.println("Средний бал = " + studentController.getAverageScore(student_id, course_id));
+                System.out.println("Введите номер четверти = ");
+                int quarter = scanner.nextInt();
+                System.out.println("Средний бал = " + studentController.getAverageScore(student_id, course_id, quarter));
             } else if (s.equals("8")) {
                 System.out.println("Введите id студента = ");
                 int id = scanner.nextInt();
-                System.out.println(studentController.getAverageScoreByAllCourse(id));
+                System.out.println("Введите номер четверти = ");
+                int quarter = scanner.nextInt();
+                System.out.println(studentController.getAverageScoreByAllCourse(id, quarter));
+            } else if (s.equals("9")) {
+                System.out.println("Введите id студента = ");
+                int student_id = scanner.nextInt();
+
+                for (int quarter = 1; quarter < 5; quarter++) {
+                    System.out.println("Четверть " + quarter);
+                    System.out.println(studentController.getAllMarksQuarter(student_id, quarter));
+                }
             } else {
                 break;
             }

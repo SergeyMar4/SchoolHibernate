@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8c8f379-7451-4d3e-b6c4-b632ff57c5a3" name="Changes" comment="Исправление некоторых ошибок">
+    <list default="true" id="d8c8f379-7451-4d3e-b6c4-b632ff57c5a3" name="Changes" comment="Исправление некоторых ошибок и добаление методов в Students">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/controllers/MarkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/controllers/MarkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/controllers/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/SchoolClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/SchoolClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Mark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/models/Mark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/repositories/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/views/MarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/views/MarkView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/views/StudentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sergeymar4/schoolhibernate/views/StudentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.sqlite" afterDir="false" />
     </list>
@@ -105,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706432936801</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Исправление некоторых ошибок и добаление методов в Students">
+      <option name="closed" value="true" />
+      <created>1706632606563</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706632606563</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,6 +125,7 @@
     <MESSAGE value="Создание и частичная реализация views, изменение controllers и repositories, создание и реализация AppRunner" />
     <MESSAGE value="Реализация условных операторов во Views" />
     <MESSAGE value="Исправление некоторых ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление некоторых ошибок" />
+    <MESSAGE value="Исправление некоторых ошибок и добаление методов в Students" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление некоторых ошибок и добаление методов в Students" />
   </component>
 </project>

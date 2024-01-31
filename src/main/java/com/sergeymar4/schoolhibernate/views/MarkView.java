@@ -32,13 +32,15 @@ public class MarkView {
                 int id = scanner.nextInt();
                 System.out.println(markController.getById(id));
             } else if (s.equals("2")) {
-                System.out.println("Введите id предмета =");
-                int course_id = scanner.nextInt();
                 System.out.println("Введите id студента = ");
                 int student_id = scanner.nextInt();
+                System.out.println("Введите id предмета =");
+                int course_id = scanner.nextInt();
                 System.out.println("Введите оценку = ");
                 int mark = scanner.nextInt();
-                markController.create(course_id, student_id, mark);
+                System.out.println("Введите номер четверти = ");
+                int quarter = scanner.nextInt();
+                markController.create(course_id, student_id, mark, quarter);
             } else if (s.equals("3")) {
                 System.out.println("Введите id оценки = ");
                 int id = scanner.nextInt();

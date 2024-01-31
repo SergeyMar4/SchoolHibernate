@@ -17,6 +17,8 @@ public class Mark {
     private Course course;
     @Column(name = "mark")
     private int mark;
+    @Column(name = "quarter")
+    private int quarter;
 
     public int getId() {
         return id;
@@ -50,6 +52,14 @@ public class Mark {
         this.mark = mark;
     }
 
+    public int getQuarter() {
+        return quarter;
+    }
+
+    public void setQuarter(int quarter) {
+        this.quarter = quarter;
+    }
+
     @Override
     public String toString() {
         return "Mark{" +
@@ -57,6 +67,7 @@ public class Mark {
                 ", student=" + student +
                 ", course=" + course +
                 ", mark=" + mark +
+                ", quarter=" + quarter +
                 '}';
     }
 }

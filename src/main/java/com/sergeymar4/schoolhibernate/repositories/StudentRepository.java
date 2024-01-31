@@ -57,13 +57,14 @@ public class StudentRepository {
         }
     }
 
-    public List<Mark> getAllMarksByCourse(int student_id, int course_id) {
+    public List<Mark> getAllMarksByCourse(int student_id, int course_id, int quarter) {
         List<Mark> marks = null;
 
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Query query = session.createQuery("from Mark where student_id=:student_id and course_id=:course_id");
+            Query query = session.createQuery("from Mark where student_id=:student_id and course_id=:course_id and quarter=:quarter");
             query.setParameter("student_id", student_id);
             query.setParameter("course_id", course_id);
+            query.setParameter("quarter", quarter);
             marks = query.list();
         }
 
